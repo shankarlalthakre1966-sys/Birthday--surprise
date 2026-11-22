@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#dff2ff">
+<title>A Little Surprise for Harsh Bhaiyaa</title>
+<style>
+:root{--blue:#8ecdf2;--deep:#397da8;--ink:#29465a;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:linear-gradient(180deg,#dff3ff 0%,#f7fbff 48%,#e8f5ff 100%);min-height:100vh;overflow-x:hidden}
+.cloud{position:fixed;background:#fff;opacity:.55;border-radius:100px;filter:blur(1px);z-index:-1}
+.c1{width:190px;height:65px;top:10%;left:-40px}.c2{width:230px;height:75px;top:42%;right:-70px}.c3{width:160px;height:55px;bottom:10%;left:8%}
+main{width:min(92%,720px);margin:26px auto 50px}
+.card{background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.95);border-radius:28px;padding:clamp(24px,6vw,48px);box-shadow:0 14px 45px rgba(73,137,176,.12);text-align:center;margin:18px 0}
+.eyebrow{font:12px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#6b9fbd}
+h1{font-size:clamp(35px,8vw,58px);font-weight:normal;line-height:1.08;margin:18px 0;color:#376f91}
+h2{font-size:clamp(25px,6vw,34px);font-weight:normal;color:#397da8;margin:8px 0 18px}
+p{font-size:17px;line-height:1.8;margin:12px auto;max-width:570px}
+button{border:0;border-radius:30px;padding:14px 25px;background:#6fb5df;color:white;font-size:15px;letter-spacing:.4px;cursor:pointer;margin:8px;box-shadow:0 6px 16px rgba(73,137,176,.18)}
+button:hover{background:#4f9bc9}
+.secondary{background:#e8f5fc;color:#397da8}
+.hidden{display:none}
+.options{display:grid;grid-template-columns:1fr;gap:10px;max-width:440px;margin:20px auto}
+.options button{margin:0;background:#edf7fd;color:#416e89;border:1px solid #d6eaf6;box-shadow:none}
+.options button:hover{background:#d8effc}
+#feedback{min-height:28px;color:#397da8;font-style:italic}
+.progress{font:12px Arial,sans-serif;letter-spacing:1px;color:#7ca8c2}
+.letter{text-align:left;background:#f7fbff;border-left:3px solid #9acfea;padding:22px;border-radius:8px;white-space:normal}
+.signature{font-style:italic;color:#397da8}
+footer{text-align:center;font:12px Arial,sans-serif;color:#7ea7bf;padding:12px}
+.sparkle{font-size:23px;color:#80bde0}
+</style>
+</head>
+<body>
+<div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+<main>
+<section class="card" id="welcome">
+<div class="sparkle">✦　☁　✦</div>
+<div class="eyebrow">A birthday surprise</div>
+<h1>A Little Surprise<br>for Someone Special</h1>
+<p><b>To My First Hero, My Bhaiyaa — Harsh.</b></p>
+<p>Today is all about you. So, take a moment and enjoy this little surprise made with love.</p>
+<button onclick="show('words')">Let's Begin →</button>
+</section>
+
+<section class="card hidden" id="words">
+<div class="eyebrow">A few words for you</div><h2>For My Bhaiyaa 🩵</h2>
+<p>You are not just my Bhaiyaa, you are someone who makes life feel a little easier and happier.</p>
+<p>Caring, understanding, supportive, responsible — you have so many qualities that make you truly special. We may have our little nok-jhok moments, but the love and respect will always remain the same.</p>
+<p>I'm lucky to have you as my brother. 🩵</p>
+<button onclick="show('quiz')">Let's Play a Little Quiz →</button>
+</section>
+
+<section class="card hidden" id="quiz">
+<div class="eyebrow">Just for fun</div><h2>How Well Do You Know Us?</h2>
+<p class="progress" id="progress">QUESTION 1 OF 5</p>
+<p id="question" style="font-size:21px">What describes our bond best?</p>
+<div class="options" id="options"></div>
+<p id="feedback" aria-live="polite"></p>
+<button id="next" class="hidden" onclick="nextQuestion()">Next Question →</button>
+</section>
+
+<section class="card hidden" id="bond">
+<div class="eyebrow">Our special bond</div><h2>Different Moments, One Bond</h2>
+<p>From childhood teasing and endless nok-jhok to understanding each other better as we grow up — every phase has its own memories.</p>
+<p>We don't have to say everything out loud to know that we are there for each other. No matter how much we argue, you'll always be my Bhaiyaa and I'll always be your little sibling. 🩵</p>
+<button onclick="show('letter')">One Last Thing… →</button>
+</section>
+
+<section class="card hidden" id="letter">
+<div class="eyebrow">A little letter</div><h2>Dear Bhaiyaa,</h2>
+<div class="letter">
+<p>Happy Birthday, Bhaiyaa! 🩵</p>
+<p>I may not say it every day, but I truly appreciate everything you are and everything you do. Thank you for being caring, understanding, supportive and for making me feel that I have someone by my side.</p>
+<p>We have grown up, and a lot has changed, but one thing will always stay the same — you'll always have a special place in my life. I hope this year brings you happiness, peace, success and all the beautiful things you deserve.</p>
+<p>Keep smiling, keep shining, and never forget how much you mean to me.</p>
+<p class="signature">With lots of love,<br>Your little sibling ♡</p>
+</div>
+<button onclick="show('final')">Open Your Birthday Wish →</button>
+</section>
+
+<section class="card hidden" id="final">
+<div class="sparkle">☁ ✦ 🩵 ✦ ☁</div>
+<div class="eyebrow">The most special day</div>
+<h1>Happy Birthday,<br>Harsh Bhaiyaa!</h1>
+<p>May your days be as calm as a clear blue sky and your dreams as endless as the horizon.</p>
+<p><b>Stay happy. Stay blessed. Keep being you.</b></p>
+<p>Love you, Bhaiyaa! 🩵</p>
+<div class="sparkle">✦　♡　✦</div>
+<button class="secondary" onclick="show('welcome')">Replay the Surprise ↻</button>
+</section>
+<footer>Made with love, just for Harsh Bhaiyaa · 🩵</footer>
+</main>
+<script>
+const questions=[
+ {q:"What describes our bond best?",a:["Caring, understanding & lots of nok-jhok","Only serious talks","We never talk"],c:0,why:"Exactly! A little nok-jhok, a lot of love."},
+ {q:"Who used to do more teasing in childhood?",a:["Bhaiyaa, obviously!","Me, always","No one"],c:0,why:"Those childhood teasing memories are unforgettable! 😂"},
+ {q:"What is one thing that never changes?",a:["Our sibling bond","Our age","Our favourite food"],c:0,why:"No matter how much we grow, this bond stays."},
+ {q:"When life gets difficult, what matters most?",a:["Having someone who understands","Winning every argument","Ignoring everyone"],c:0,why:"Being there for each other matters the most."},
+ {q:"What is today's biggest reason to celebrate?",a:["It's Harsh Bhaiyaa's birthday!","A random holiday","Quiz champion day"],c:0,why:"Of course! Today is all about you. Happy Birthday! 🩵"}
+];
+let index=0,score=0,answered=false;
+function show(id){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});if(id==='quiz')renderQuestion()}
+function renderQuestion(){answered=false;document.getElementById('progress').textContent=`QUESTION ${index+1} OF ${questions.length}`;document.getElementById('question').textContent=questions[index].q;document.getElementById('feedback').textContent='';document.getElementById('next').classList.add('hidden');let box=document.getElementById('options');box.innerHTML='';questions[index].a.forEach((a,i)=>{let b=document.createElement('button');b.textContent=a;b.onclick=()=>answer(i);box.appendChild(b)})}
+function answer(i){if(answered)return;answered=true;let q=questions[index];if(i===q.c)score++;document.getElementById('feedback').textContent=q.why;document.querySelectorAll('#options button').forEach((b,j)=>{b.disabled=true;b.style.opacity=j===q.c?'1':'.58';if(j===q.c)b.style.outline='2px solid #8ecdf2'});document.getElementById('next').textContent=index===questions.length-1?'See Your Result →':'Next Question →';document.getElementById('next').classList.remove('hidden')}
+function nextQuestion(){if(index<questions.length-1){index++;renderQuestion()}else{document.getElementById('question').textContent=`You got ${score} out of ${questions.length}!`;document.getElementById('options').innerHTML='';document.getElementById('feedback').textContent='Quiz complete — but you will always be my favourite Bhaiyaa. 🩵';document.getElementById('next').textContent='Continue →';document.getElementById('next').onclick=()=>{document.getElementById('next').onclick=nextQuestion;show('bond')}}}
+</script>
+</body>
+</html>
